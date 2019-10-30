@@ -26,20 +26,8 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -74,19 +62,41 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'ホーム',
+          to: '/' // TODO:スクロールに修正する
+        },
+        {
+          icon: 'mdi-information-outline',
+          title: '最新情報',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-circle-outline',
+          title: 'サークル紹介',
+          to: '/'
+        },
+        {
+          icon: 'mdi-account-supervisor-circle',
+          title: 'コーチ紹介',
+          to: '/'
+        },
+        {
+          icon: 'mdi-calendar',
+          title: 'スケジュール',
+          to: '/'
+        },
+        {
+          icon: 'mdi-movie-open-outline',
+          title: 'メンバー動画',
+          to: '/'
+        },
+        {
+          icon: 'mdi-contact-mail-outline',
+          title: 'お問い合わせ',
+          to: '/'
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'SoulSpice'
     }
   }
 }
