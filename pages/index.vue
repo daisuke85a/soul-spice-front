@@ -1,5 +1,14 @@
 <template>
-  <v-layout column justify-center align-center></v-layout>
+  <div>
+    <top />
+  </div>
 </template>
 
-<script></script>
+<script>
+import Top from '~/components/Top.vue'
+export default {
+  components: {
+    Top
+  }
+}
+</script>
