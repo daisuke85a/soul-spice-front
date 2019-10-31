@@ -39,9 +39,11 @@ export default {
   methods: {
     onScroll() {
       this.scrollY = window.pageYOffset
+      this.position = this.getPosition()
     },
     onResize() {
       this.height = document.documentElement.clientHeight
+      this.position = this.getPosition()
     },
     getPosition() {
       if (this.$el) {
@@ -55,21 +57,17 @@ export default {
 </script>
 <style scoped>
 .active {
-  animation: up-in 2s;
-  -webkit-transition: all 1.5s;
-  -moz-transition: all 1.5s;
-  -ms-transition: all 1.5s;
-  -o-transition: all 1.5s;
-  transition: all 1.5s;
-  opacity: 1;
+  animation: fadeInUp 2s;
 }
 
-@keyframes up-in {
+@keyframes fadeInUp {
   0% {
     transform: translateY(100%);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
