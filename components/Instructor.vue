@@ -9,19 +9,25 @@
     </v-row>
     <v-row justify="center">
       <v-col class="col-12 col-sm-5">
-        <fade-in-up-in-screen>
-          <v-card class="pa-2 ma-2 mx-auto" outlined tile>
+        <v-card class="pa-2 ma-2 mx-auto" outlined tile>
+          <fade-in-up-in-screen>
             <v-img
               class="white--text align-end"
               src="/images/yukky.jpg"
               style="border-radius: 50%;"
             ></v-img>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-title class="font-weight-bold">
               YUKKY
             </v-card-title>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-subtitle>
               土曜日：HOUSE・HIPHOPクラス担当
             </v-card-subtitle>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-text class="text--primary">
               <!-- TODO: テキストが一定以上の場合はアコーディオンにしたい -->
               <div>
@@ -69,23 +75,29 @@
                 </p>
               </div>
             </v-card-text>
-          </v-card>
-        </fade-in-up-in-screen>
+          </fade-in-up-in-screen>
+        </v-card>
       </v-col>
       <v-col class="col-12 col-sm-5">
-        <fade-in-up-in-screen>
-          <v-card class="pa-2 ma-2 mx-auto" outlined tile>
+        <v-card class="pa-2 ma-2 mx-auto" outlined tile>
+          <fade-in-up-in-screen>
             <v-img
               class="white--text align-end"
               src="/images/takuya.jpg"
               style="border-radius: 50%;"
             ></v-img>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-title class="font-weight-bold">
               TAKUYA
             </v-card-title>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-subtitle>
               水曜日：LOCK・FREE STYLEクラス担当
             </v-card-subtitle>
+          </fade-in-up-in-screen>
+          <fade-in-up-in-screen>
             <v-card-text class="text--primary">
               <!-- TODO: テキストが一定以上の場合はアコーディオンにしたい -->
               <div>
@@ -134,8 +146,8 @@
                 </p>
               </div>
             </v-card-text>
-          </v-card>
-        </fade-in-up-in-screen>
+          </fade-in-up-in-screen>
+        </v-card>
       </v-col>
     </v-row>
   </div>

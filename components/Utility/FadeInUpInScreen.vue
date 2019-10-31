@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ active: isInScreen }">
+  <div :class="[{ active: isInScreen }, { default: isOutScreen }]">
     <slot></slot>
   </div>
 </template>
@@ -25,6 +25,14 @@ export default {
         return true
       } else {
         return false
+      }
+    },
+    // TODO: this.isInScreen()がコールできない。他にきれいな書き方がないか？
+    isOutScreen() {
+      if (this.scrollY > this.position + this.offset) {
+        return false
+      } else {
+        return true
       }
     }
   },
@@ -59,7 +67,9 @@ export default {
 .active {
   animation: fadeInUp 2s;
 }
-
+.default {
+  opacity: 0;
+}
 @keyframes fadeInUp {
   0% {
     transform: translateY(100%);
