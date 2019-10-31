@@ -53,3 +53,23 @@ export default {
   }
 }
 </script>
+<style scoped>
+.active {
+  animation: up-in 2s;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  opacity: 1;
+}
+
+@keyframes up-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+</style>
