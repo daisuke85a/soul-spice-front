@@ -1,5 +1,5 @@
 <template>
-  <div class="cyan lighten-5">
+  <div>
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
         <h2 class="display-2 font-weight-black pa-5">[ NEWS ]</h2>
@@ -8,7 +8,7 @@
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
     <v-row v-for="n in 1" :key="n" class="mb-1" no-gutters>
       <v-col v-for="k in 3" :key="k" class="col-12 col-sm-4">
-        <v-card class="pa-2 ma-2 mx-auto cyan lighten-5" outlined tile>
+        <v-card class="pa-2 ma-2 mx-auto" outlined tile>
           <v-img
             class="white--text align-end"
             src="/images/NEWS-2019-09-21.jpg"
