@@ -7,7 +7,7 @@
     </v-row>
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
     <v-row v-for="n in 1" :key="n" class="mb-1" no-gutters>
-      <v-col v-for="k in 3" :key="k" cols="4">
+      <v-col v-for="k in 3" :key="k" class="col-12 col-sm-4">
         <v-card class="pa-2 ma-2 mx-auto cyan lighten-5" outlined tile>
           <v-img
             class="white--text align-end"
