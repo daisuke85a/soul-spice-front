@@ -6,6 +6,7 @@
     <instructor />
     <schedule />
     <movie />
+    <contact />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import About from '~/components/About.vue'
 import Instructor from '~/components/Instructor.vue'
 import Schedule from '~/components/Schedule.vue'
 import Movie from '~/components/Movie.vue'
+import Contact from '~/components/Contact.vue'
 export default {
   components: {
     Top,
@@ -23,7 +25,8 @@ export default {
     About,
     Instructor,
     Schedule,
-    Movie
+    Movie,
+    Contact
   }
 }
 </script>
