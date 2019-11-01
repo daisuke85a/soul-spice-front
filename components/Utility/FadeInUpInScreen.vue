@@ -65,14 +65,14 @@ export default {
 </script>
 <style scoped>
 .active {
-  animation: fadeInUp 2s;
+  animation: fadeInUp 1.5s;
 }
 .default {
   opacity: 0;
 }
 @keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(300px);
     opacity: 0;
   }
   100% {
