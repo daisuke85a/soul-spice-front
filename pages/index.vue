@@ -4,6 +4,7 @@
     <news />
     <about />
     <instructor />
+    <schedule />
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import Top from '~/components/Top.vue'
 import News from '~/components/News.vue'
 import About from '~/components/About.vue'
 import Instructor from '~/components/Instructor.vue'
+import Schedule from '~/components/Schedule.vue'
 export default {
   components: {
     Top,
     News,
     About,
-    Instructor
+    Instructor,
+    Schedule
   }
 }
 </script>
