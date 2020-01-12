@@ -19,7 +19,10 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        v-show="$vuetify.breakpoint.mdAndDown"
+        @click.stop="drawer = !drawer"
+      />
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
@@ -39,7 +42,7 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: false,
+      drawer: null,
       fixed: false,
       items: [
         {
