@@ -18,14 +18,17 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon
-        v-show="$vuetify.breakpoint.mdAndDown"
-        @click.stop="drawer = !drawer"
-      />
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-    </v-app-bar>
+    <v-btn
+      v-show="$vuetify.breakpoint.mdAndDown"
+      fab
+      color="light-blue"
+      top
+      left
+      fixed
+      @click.stop="drawer = !drawer"
+    >
+      <v-icon color="white">mdi-menu</v-icon>
+    </v-btn>
     <v-content>
       <v-container>
         <nuxt />
