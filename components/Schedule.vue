@@ -10,47 +10,47 @@
           </fade-in-up-in-screen>
         </v-col>
         <v-col class="text-left" cols="12">
-          <!-- <fade-in-up-in-screen> -->
-          <v-simple-table class="font-weight-bold">
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th class="text-left">#</th>
-                  <th class="text-left">水曜</th>
-                  <th class="text-left">土曜</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>18:00～18:50</td>
-                  <td>
-                    LOCK・FREESTYLE<br />
-                    スタートクラス<br />
-                    TAKUYA<br />
-                  </td>
-                  <td>
-                    HOUSE・HIPHOP<br />
-                    スタートクラス<br />
-                    YUKKY<br />
-                  </td>
-                </tr>
-                <tr>
-                  <td>19:00～21:00</td>
-                  <td>
-                    LOCK・FREESTYLE<br />
-                    初中級<br />
-                    TAKUYA<br />
-                  </td>
-                  <td>
-                    HOUSE・HIPHOP<br />
-                    初中級<br />
-                    YUKKY<br />
-                  </td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
-          <!-- </fade-in-up-in-screen> -->
+          <fade-in-up-in-screen>
+            <v-simple-table class="font-weight-bold">
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th class="text-left">#</th>
+                    <th class="text-left">水曜</th>
+                    <th class="text-left">土曜</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>18:00～18:50</td>
+                    <td>
+                      LOCK・FREESTYLE<br />
+                      スタートクラス<br />
+                      TAKUYA<br />
+                    </td>
+                    <td>
+                      HOUSE・HIPHOP<br />
+                      スタートクラス<br />
+                      YUKKY<br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>19:00～21:00</td>
+                    <td>
+                      LOCK・FREESTYLE<br />
+                      初中級<br />
+                      TAKUYA<br />
+                    </td>
+                    <td>
+                      HOUSE・HIPHOP<br />
+                      初中級<br />
+                      YUKKY<br />
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </fade-in-up-in-screen>
         </v-col>
       </v-row>
     </v-parallax>

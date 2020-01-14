@@ -9,13 +9,15 @@
     </v-row>
     <v-row justify="center">
       <v-col class="embed-responsive embed-responsive-16by9" cols="12">
-        <iframe
-          class="embed-responsive-item"
-          src="https://www.youtube.com/embed/videoseries?list=PLJgPtg4l-yVZ8FlF_mMu439KD6322ytoj&amp;ecver=1"
-          frameborder="0"
-          allow="autoplay; "
-          allowfullscreen
-        ></iframe>
+        <fade-in-up-in-screen>
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/videoseries?list=PLJgPtg4l-yVZ8FlF_mMu439KD6322ytoj&amp;ecver=1"
+            frameborder="0"
+            allow="autoplay; "
+            allowfullscreen
+          ></iframe>
+        </fade-in-up-in-screen>
       </v-col>
     </v-row>
   </div>

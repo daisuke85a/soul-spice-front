@@ -1,12 +1,12 @@
 <template>
   <div>
-    <v-row align="center" justify="center">
-      <v-col class="text-center" cols="12">
-        <fade-in-up-in-screen>
+    <fade-in-up-in-screen>
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
           <h2 class="display-2 font-weight-black pa-5">[ NEWS ]</h2>
-        </fade-in-up-in-screen>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </fade-in-up-in-screen>
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
     <v-row v-for="n in 1" :key="n" class="mb-1" no-gutters>
       <v-col v-for="k in 3" :key="k" class="col-12 col-sm-4">

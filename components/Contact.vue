@@ -2,43 +2,47 @@
   <div>
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
-        <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
+        <fade-in-up-in-screen>
+          <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
+        </fade-in-up-in-screen>
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col class="text-center" cols="12">
-        <form>
-          <v-text-field
-            v-model="name"
-            :error-messages="nameErrors"
-            :counter="30"
-            label="お名前"
-            required
-            @input="$v.name.$touch()"
-            @blur="$v.name.$touch()"
-          ></v-text-field>
-          <v-text-field
-            v-model="email"
-            :error-messages="emailErrors"
-            label="メールアドレス"
-            required
-            @input="$v.email.$touch()"
-            @blur="$v.email.$touch()"
-          ></v-text-field>
-          <v-textarea
-            v-model="text"
-            :error-messages="textErrors"
-            clearable
-            clear-icon="mdi-close-circle"
-            label="お問い合わせ内容"
-            required
-            value=""
-            @input="$v.text.$touch()"
-            @blur="$v.text.$touch()"
-          ></v-textarea>
-          <v-btn class="mr-4" color="primary" @click="submit">送信</v-btn>
-          <v-btn color="secondary" @click="clear">clear</v-btn>
-        </form>
+        <fade-in-up-in-screen>
+          <form>
+            <v-text-field
+              v-model="name"
+              :error-messages="nameErrors"
+              :counter="30"
+              label="お名前"
+              required
+              @input="$v.name.$touch()"
+              @blur="$v.name.$touch()"
+            ></v-text-field>
+            <v-text-field
+              v-model="email"
+              :error-messages="emailErrors"
+              label="メールアドレス"
+              required
+              @input="$v.email.$touch()"
+              @blur="$v.email.$touch()"
+            ></v-text-field>
+            <v-textarea
+              v-model="text"
+              :error-messages="textErrors"
+              clearable
+              clear-icon="mdi-close-circle"
+              label="お問い合わせ内容"
+              required
+              value=""
+              @input="$v.text.$touch()"
+              @blur="$v.text.$touch()"
+            ></v-textarea>
+            <v-btn class="mr-4" color="primary" @click="submit">送信</v-btn>
+            <v-btn color="secondary" @click="clear">clear</v-btn>
+          </form>
+        </fade-in-up-in-screen>
       </v-col>
     </v-row>
   </div>
