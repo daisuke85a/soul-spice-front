@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     isInScreen() {
-      if (this.scrollY > this.position + this.offset) {
+      if (this.scrollY > this.position) {
         return true
       } else {
         return false
@@ -29,7 +29,7 @@ export default {
     },
     // TODO: this.isInScreen()がコールできない。他にきれいな書き方がないか？
     isOutScreen() {
-      if (this.scrollY > this.position + this.offset) {
+      if (this.scrollY > this.position) {
         return false
       } else {
         return true
