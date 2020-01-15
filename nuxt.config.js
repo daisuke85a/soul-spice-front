@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
+const { API_KEY } = process.env
+
 export default {
   mode: 'universal',
   /*
@@ -80,5 +83,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    API_KEY
   }
 }

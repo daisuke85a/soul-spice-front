@@ -1,31 +1,28 @@
 <template>
   <div>
-    <fade-in-up-in-screen>
-      <v-row align="center" justify="center">
-        <v-col class="text-center" cols="12">
+    <v-row align="center" justify="center">
+      <v-col class="text-center" cols="12">
+        <fade-in-up-in-screen>
           <h2 class="display-2 font-weight-black pa-5">[ NEWS ]</h2>
-        </v-col>
-      </v-row>
-    </fade-in-up-in-screen>
+        </fade-in-up-in-screen>
+      </v-col>
+    </v-row>
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
     <v-row v-for="n in 1" :key="n" class="mb-1" no-gutters>
       <v-col v-for="k in 3" :key="k" class="col-12 col-sm-4">
         <fade-in-up-in-screen>
           <v-card class="pa-2 ma-2 mx-auto" outlined tile>
-            <v-img
-              class="white--text align-end"
-              src="/images/NEWS-2019-09-21.jpg"
-            >
+            <v-img class="white--text align-end" :src="image">
               <!-- TODO: テキストの背景をグレーの透過色にしておしゃれにしたい -->
               <v-card-title class="font-weight-bold py-0">
-                ダンスコンテストGLORYの<br />U15部門Flava2位
+                {{ title }}
               </v-card-title>
             </v-img>
-            <v-card-subtitle class="pb-0">2019/9/21</v-card-subtitle>
+            <v-card-subtitle class="pb-0">{{ date }}</v-card-subtitle>
             <v-card-text class="text--primary">
               <!-- TODO: テキストが一定以上の場合はアコーディオンにしたい -->
               <div>
-                とてつもなく豪華なジャッジの方に見ていただけるだけではなくその場で全てのジャッジから得点や総評、個人感想もいただけてとても実のあるコンテストでした。関係者の方々、一緒に写真をとってくれた方々、ありがとうございました！そして子供達には挑戦できる場所がある事、親御さんの協力や応援してくれる仲間、この環境が当たり前ではないという事、謙虚さと感謝を忘れずにこれからも目標に向かって進んで行ってほしいです。
+                {{ paragraph }}
               </div>
             </v-card-text>
           </v-card>
@@ -34,3 +31,33 @@
     </v-row>
   </div>
 </template>
+<script>
+const axios = require('axios')
+export default {
+  data() {
+    return {
+      title: null,
+      date: null,
+      image: 'init', // nullだとimageの読み込みに失敗してエラーになるから初期化
+      paragraph: null
+    }
+  },
+  async mounted() {
+    const news = await axios.get('https://soulspice.microcms.io/api/v1/news', {
+      headers: {
+        'X-API-KEY': process.env.API_KEY
+      }
+    })
+    console.log(news)
+    this.title = news.data.contents[0].title
+
+    const date = new Date(news.data.contents[0].date)
+    const formatted = `${date.getFullYear()}-${date.getMonth() +
+      1}-${date.getDate()}`.replace(/\n|\r/g, '')
+
+    this.date = formatted
+    this.image = news.data.contents[0].image.url
+    this.paragraph = news.data.contents[0].paragraph
+  }
+}
+</script>
