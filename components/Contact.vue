@@ -39,8 +39,29 @@
               @input="$v.text.$touch()"
               @blur="$v.text.$touch()"
             ></v-textarea>
-            <v-btn class="mr-4" color="primary" @click="submit">送信</v-btn>
+            <v-btn
+              class="mr-4"
+              color="primary"
+              :loading="loading"
+              :disabled="loading"
+              @click="submit"
+              >送信</v-btn
+            >
             <v-btn color="secondary" @click="clear">clear</v-btn>
+            <v-dialog v-model="dialog">
+              <v-card>
+                <v-card-title class="headline">{{
+                  dialogText.title
+                }}</v-card-title>
+                <v-card-text> {{ dialogText.content }} </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="green darken-1" text @click="dialog = false">
+                    OK
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </form>
         </fade-in-up-in-screen>
       </v-col>
@@ -51,6 +72,18 @@
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 const axios = require('axios')
+const dialogText = {
+  success: {
+    title: 'お問い合わせありがとうございます',
+    content:
+      '3日以内にご記入いただいたアドレスにメールをお送りいたします。大変恐縮ですがしばらくお待ち下さい。'
+  },
+  failed: {
+    title: 'お問い合わせに失敗しました',
+    content:
+      'お手数ですが、別途soulspice2006@gmail.comまでご連絡をお願いいたします。'
+  }
+}
 
 export default {
   mixins: [validationMixin],
@@ -64,7 +97,10 @@ export default {
   data: () => ({
     name: '',
     email: '',
-    text: ''
+    text: '',
+    loading: false,
+    dialog: false,
+    dialogText: dialogText.success
   }),
 
   computed: {
@@ -94,18 +130,31 @@ export default {
 
   methods: {
     async submit() {
-      // TODO: #11 送信中のインタラクションをさせたい
-      const response = await axios.post(
-        process.env.CONTACT_BASE_URL + '/api/contacts',
-        {
-          name: this.name,
-          email: this.email,
-          content: this.text
-        }
-      )
-      console.log(response)
-      // TODO： #12 送信成功/失敗がわかるようにダイアログを出したい
       this.$v.$touch()
+      if (this.$v.$invalid) {
+        return
+      }
+      this.loading = true
+      try {
+        const response = await axios.post(
+          process.env.CONTACT_BASE_URL + '/api/contacts',
+          {
+            name: this.name,
+            email: this.email,
+            content: this.text
+          }
+        )
+        console.log(response)
+        this.dialogText = dialogText.success
+        this.name = ''
+        this.email = ''
+        this.text = ''
+        this.$v.$reset()
+      } catch (e) {
+        this.dialogText = dialogText.failed
+      }
+      this.loading = false
+      this.dialog = true
     },
     clear() {
       this.$v.$reset()
