@@ -50,6 +50,7 @@
 <script>
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
+const axios = require('axios')
 
 export default {
   mixins: [validationMixin],
@@ -92,7 +93,18 @@ export default {
   },
 
   methods: {
-    submit() {
+    async submit() {
+      // TODO: #11 送信中のインタラクションをさせたい
+      const response = await axios.post(
+        process.env.CONTACT_BASE_URL + '/api/contacts',
+        {
+          name: this.name,
+          email: this.email,
+          content: this.text
+        }
+      )
+      console.log(response)
+      // TODO： #12 送信成功/失敗がわかるようにダイアログを出したい
       this.$v.$touch()
     },
     clear() {
