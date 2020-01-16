@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 require('dotenv').config()
-const { API_KEY } = process.env
+const { API_KEY, CONTACT_BASE_URL } = process.env
 
 export default {
   mode: 'universal',
@@ -85,6 +85,7 @@ export default {
     extend(config, ctx) {}
   },
   env: {
-    API_KEY
+    API_KEY,
+    CONTACT_BASE_URL
   }
 }
