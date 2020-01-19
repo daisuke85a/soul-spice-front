@@ -2,7 +2,7 @@
   <div>
     <!-- TODO: 画面いっぱいに広がるように拡張したい -->
     <!-- レスポンシブレイアウトに応じてheightを調節したい -->
-    <v-parallax dark src="/images/bg.jpg" height="400">
+    <v-parallax dark src="/images/bg.jpg">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <fade-in-up-in-screen>
