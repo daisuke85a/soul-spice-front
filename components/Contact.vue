@@ -2,73 +2,70 @@
   <div>
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
-        <fade-in-up-in-screen>
-          <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
-          <p>
-            サークル参加についての詳細や、イベントブッキングについてのお問い合わせはこちらからお願いします。
-          </p>
-        </fade-in-up-in-screen>
+        <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
+        <p>
+          サークル参加についての詳細やイベントブッキングについてなど、お気軽にお問い合わせください！
+        </p>
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col class="text-center" cols="12">
-        <fade-in-up-in-screen>
-          <form>
-            <v-text-field
-              v-model="name"
-              :error-messages="nameErrors"
-              :counter="30"
-              label="お名前"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :error-messages="emailErrors"
-              label="メールアドレス"
-              required
-              @input="$v.email.$touch()"
-              @blur="$v.email.$touch()"
-            ></v-text-field>
-            <v-textarea
-              v-model="text"
-              :error-messages="textErrors"
-              clearable
-              clear-icon="mdi-close-circle"
-              label="お問い合わせ内容"
-              placeholder="例：サークル参加についての詳細や、イベントブッキングについてなど"
-              required
-              value=""
-              @input="$v.text.$touch()"
-              @blur="$v.text.$touch()"
-            ></v-textarea>
-            <v-btn
-              class="mr-4"
-              color="primary"
-              :loading="loading"
-              :disabled="loading"
-              x-large
-              block
-              @click="submit"
-              >送信</v-btn
-            >
-            <v-dialog v-model="dialog">
-              <v-card>
-                <v-card-title class="headline">{{
-                  dialogText.title
-                }}</v-card-title>
-                <v-card-text> {{ dialogText.content }} </v-card-text>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn color="green darken-1" text @click="dialog = false">
-                    OK
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </form>
-        </fade-in-up-in-screen>
+        <form>
+          <v-text-field
+            v-model="name"
+            :error-messages="nameErrors"
+            :counter="30"
+            label="お名前"
+            required
+            @input="$v.name.$touch()"
+            @blur="$v.name.$touch()"
+          ></v-text-field>
+          <v-text-field
+            v-model="email"
+            :error-messages="emailErrors"
+            label="メールアドレス"
+            required
+            @input="$v.email.$touch()"
+            @blur="$v.email.$touch()"
+          ></v-text-field>
+          <v-textarea
+            v-model="text"
+            :error-messages="textErrors"
+            clearable
+            clear-icon="mdi-close-circle"
+            label="お問い合わせ内容"
+            placeholder="例：サークル参加についての詳細や、イベントブッキングについてなど"
+            required
+            value=""
+            @input="$v.text.$touch()"
+            @blur="$v.text.$touch()"
+          ></v-textarea>
+          <v-btn
+            class="mr-4"
+            color="orange font-weight-bold"
+            dark
+            :loading="loading"
+            :disabled="loading"
+            x-large
+            block
+            @click="submit"
+            ><v-icon>mdi-email</v-icon>お問い合わせ</v-btn
+          >
+          <v-dialog v-model="dialog">
+            <v-card>
+              <v-card-title class="headline">{{
+                dialogText.title
+              }}</v-card-title>
+              <v-card-text> {{ dialogText.content }} </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="green darken-1" text @click="dialog = false">
+                  OK
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </form>
       </v-col>
     </v-row>
   </div>

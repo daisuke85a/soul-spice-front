@@ -29,6 +29,11 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row align="center" justify="center">
+      <v-btn color="light-blue" dark class="mb-5" @click="addNews">
+        NEWSをもっと見る
+      </v-btn>
+    </v-row>
   </div>
 </template>
 <script>
