@@ -4,6 +4,9 @@
       <v-col class="text-center" cols="12">
         <fade-in-up-in-screen>
           <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
+          <p>
+            サークル参加についての詳細や、イベントブッキングについてのお問い合わせはこちらからお願いします。
+          </p>
         </fade-in-up-in-screen>
       </v-col>
     </v-row>
@@ -34,6 +37,7 @@
               clearable
               clear-icon="mdi-close-circle"
               label="お問い合わせ内容"
+              placeholder="例：サークル参加についての詳細や、イベントブッキングについてなど"
               required
               value=""
               @input="$v.text.$touch()"
@@ -44,10 +48,11 @@
               color="primary"
               :loading="loading"
               :disabled="loading"
+              x-large
+              block
               @click="submit"
               >送信</v-btn
             >
-            <v-btn color="secondary" @click="clear">clear</v-btn>
             <v-dialog v-model="dialog">
               <v-card>
                 <v-card-title class="headline">{{

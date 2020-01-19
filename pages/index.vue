@@ -94,7 +94,7 @@ export default {
           to: '#movie'
         },
         {
-          icon: 'mdi-contact-mail-outline',
+          icon: 'mdi-email',
           title: 'お問い合わせ',
           to: '#contact'
         }

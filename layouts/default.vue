@@ -6,7 +6,10 @@
       </v-container>
     </v-content>
     <v-footer app>
-      <span>&copy; 2019</span>
+      <v-spacer></v-spacer>
+      <span @click="$vuetify.goTo('#contact')">
+        <v-icon style="cursor: pointer;">mdi-email</v-icon>
+      </span>
     </v-footer>
   </v-app>
 </template>
