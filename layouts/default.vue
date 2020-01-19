@@ -7,8 +7,9 @@
     </v-content>
     <v-footer app>
       <v-spacer></v-spacer>
-      <span @click="$vuetify.goTo('#contact')">
-        <v-icon style="cursor: pointer;">mdi-email</v-icon>
+      <span style="cursor: pointer;" @click="$vuetify.goTo('#contact')">
+        <v-icon style="cursor: pointer;">mdi-email</v-icon
+        ><span class="overline">新規メンバー＆イベントブッキング 募集中！</span>
       </span>
     </v-footer>
   </v-app>

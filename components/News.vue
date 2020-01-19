@@ -29,6 +29,11 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row align="center" justify="center">
+      <v-btn color="light-blue" dark class="mb-5" @click="addNews">
+        NEWSをもっと見る
+      </v-btn>
+    </v-row>
   </div>
 </template>
 <script>
@@ -36,34 +41,45 @@ const axios = require('axios')
 export default {
   data() {
     return {
-      contents: []
+      contents: [],
+      news: null
     }
   },
   async mounted() {
-    const news = await axios.get('https://soulspice.microcms.io/api/v1/news', {
+    this.news = await axios.get('https://soulspice.microcms.io/api/v1/news', {
       headers: {
         'X-API-KEY': process.env.API_KEY
       }
     })
-    console.log(news)
+    console.log(this.news)
+    this.addNews()
+    // this.addNews()
 
-    for (let i = 0, len = news.data.contents.length; i < len; i++) {
-      const image = news.data.contents[i].image.url
-      const date = new Date(news.data.contents[i].date)
-      const formatted = `${date.getFullYear()}-${date.getMonth() +
-        1}-${date.getDate()}`.replace(/\n|\r/g, '')
-
-      const contents = {
-        id: news.data.contents[i].id,
-        title: news.data.contents[i].title,
-        date: formatted,
-        image,
-        paragraph: news.data.contents[i].paragraph
-      }
-
-      this.contents.push(contents)
-    }
     console.log(this.contents)
+  },
+  methods: {
+    addNews() {
+      let len = this.contents.length + 3
+      if (len > this.news.data.contents.length) {
+        len = this.news.data.contents.length
+      }
+      for (let i = this.contents.length; i < len; i++) {
+        const image = this.news.data.contents[i].image.url
+        const date = new Date(this.news.data.contents[i].date)
+        const formatted = `${date.getFullYear()}-${date.getMonth() +
+          1}-${date.getDate()}`.replace(/\n|\r/g, '')
+
+        const contents = {
+          id: this.news.data.contents[i].id,
+          title: this.news.data.contents[i].title,
+          date: formatted,
+          image,
+          paragraph: this.news.data.contents[i].paragraph
+        }
+
+        this.contents.push(contents)
+      }
+    }
   }
 }
 </script>
