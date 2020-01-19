@@ -47,7 +47,6 @@
             :loading="loading"
             :disabled="loading"
             x-large
-            block
             @click="submit"
             ><v-icon>mdi-email</v-icon>お問い合わせ</v-btn
           >
