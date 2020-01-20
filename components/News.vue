@@ -13,15 +13,15 @@
         class="col-12 col-sm-4"
       >
         <v-card class="pa-2 ma-2 mx-auto" outlined tile>
-          <v-img class="white--text align-end" :src="content.image">
-            <!-- TODO: テキストの背景をグレーの透過色にしておしゃれにしたい -->
-            <v-card-title class="font-weight-bold py-0">
+          <v-img class="align-end" :src="content.image"> </v-img>
+          <!-- TODO: 画像とテキストを重ねて、背景をグレーの透過色にしておしゃれにしてみたい -->
+          <v-card-title class="font-weight-bold">
+            <h3 class="title font-weight-bold">
               {{ content.title }}
-            </v-card-title>
-          </v-img>
+            </h3>
+          </v-card-title>
           <v-card-subtitle class="pb-0">{{ content.date }}</v-card-subtitle>
           <v-card-text class="text--primary">
-            <!-- TODO: テキストが一定以上の場合はアコーディオンにしたい -->
             <div>
               {{ content.paragraph }}
             </div>
