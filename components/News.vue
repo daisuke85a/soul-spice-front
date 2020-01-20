@@ -46,11 +46,14 @@ export default {
     }
   },
   async mounted() {
-    this.news = await axios.get('https://soulspice.microcms.io/api/v1/news', {
-      headers: {
-        'X-API-KEY': process.env.API_KEY
+    this.news = await axios.get(
+      'https://soulspice.microcms.io/api/v1/news?limit=100',
+      {
+        headers: {
+          'X-API-KEY': process.env.API_KEY
+        }
       }
-    })
+    )
     console.log(this.news)
     this.addNews()
     // this.addNews()
