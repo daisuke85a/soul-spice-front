@@ -7,7 +7,7 @@
           :key="i"
           router
           exact
-          @click="$vuetify.goTo(item.to)"
+          @click="navLinkClick(item.to)"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -66,7 +66,7 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'ホーム',
-          to: '#home' // TODO:スクロールに修正する
+          to: '#home'
         },
         {
           icon: 'mdi-information-outline',
@@ -100,6 +100,12 @@ export default {
         }
       ],
       title: 'SoulSpice'
+    }
+  },
+  methods: {
+    navLinkClick(to) {
+      this.$vuetify.goTo(to)
+      this.drawer = null
     }
   }
 }
