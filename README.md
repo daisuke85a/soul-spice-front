@@ -10,6 +10,9 @@ https://serene-easley-63d6ac.netlify.com/
 ## Build Setup
 
 ``` bash
+cp .env.example .env
+.envを編集
+
 # install dependencies
 $ yarn install
 
