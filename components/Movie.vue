@@ -3,7 +3,8 @@
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
         <fade-in-up-in-screen>
-          <h2 class="display-2 font-weight-black">[ MOVIE ]</h2>
+          <h2 class="display-1 font-weight-black">MOVIE</h2>
+          <p class="subtitle-1">- メンバー動画 -</p>
         </fade-in-up-in-screen>
       </v-col>
     </v-row>
@@ -40,5 +41,8 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+.display-1 {
+  letter-spacing: 0.2em !important;
 }
 </style>

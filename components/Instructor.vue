@@ -1,12 +1,11 @@
 <template>
   <div>
-    <v-row align="center" justify="center">
-      <v-col class="text-center" cols="12">
-        <fade-in-up-in-screen>
-          <h2 class="display-2 font-weight-black">[ INSTRUCTOR ]</h2>
-        </fade-in-up-in-screen>
-      </v-col>
-    </v-row>
+    <div class="text-center py-5">
+      <fade-in-up-in-screen>
+        <h2 class="display-1 font-weight-black">INSTRUCTOR</h2>
+        <p class="subtitle-1">- コーチ紹介 -</p>
+      </fade-in-up-in-screen>
+    </div>
     <v-row justify="center">
       <v-col class="col-12 col-sm-5">
         <v-card class="pa-2 ma-2 mx-auto" outlined tile>
@@ -152,3 +151,8 @@
     </v-row>
   </div>
 </template>
+<style scoped>
+.display-1 {
+  letter-spacing: 0.2em !important;
+}
+</style>
