@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 require('dotenv').config()
-const { API_KEY, CONTACT_BASE_URL } = process.env
+const { API_KEY, CONTACT_BASE_URL, BASE_URL } = process.env
 
 export default {
   mode: 'universal',
@@ -10,17 +10,60 @@ export default {
    */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: '小平市で活動しているキッズダンスサークル、ソウルスパイスです',
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'theme-color', content: '#ffffff' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          '小平市で活動しているキッズダンスサークル、ソウルスパイスです。小学校１年生から中学校３年生までのキッズ達が、 楽しく活動 しています。 ほとんどの子供たちが初心者からダンスを始めました。ヒップホップを中心に、ロック、ハウスとなかなかキッズダンスでは習えないダンスに挑戦しています。'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: '小平市で活動しているキッズダンスサークル、ソウルスパイスです'
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: BASE_URL },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: '小平市で活動しているキッズダンスサークル、ソウルスパイスです'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          '小平市で活動しているキッズダンスサークル、ソウルスパイスです。小学校１年生から中学校３年生までのキッズ達が、 楽しく活動 しています。 ほとんどの子供たちが初心者からダンスを始めました。ヒップホップを中心に、ロック、ハウスとなかなかキッズダンスでは習えないダンスに挑戦しています。'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: BASE_URL + '/ogp.jpg'
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        property: 'apple-mobile-web-app-title',
+        content: 'SoulSpice'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png'
+      },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
+    ]
   },
   /*
    ** Customize the progress-bar color
