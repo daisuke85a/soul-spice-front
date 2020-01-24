@@ -10,10 +10,18 @@
       <span class="mx-1" @click="$vuetify.goTo('#contact')">
         <v-icon style="cursor: pointer;">mdi-email</v-icon>
       </span>
-      <a class="mx-1" href="https://www.instagram.com/soulspice2006/">
+      <a
+        class="mx-1"
+        href="https://www.instagram.com/soulspice2006/"
+        target="_blank"
+      >
         <v-icon>mdi-instagram</v-icon>
       </a>
-      <a class="mx-1" href="https://www.facebook.com/soulspice/">
+      <a
+        class="mx-1"
+        href="https://www.facebook.com/soulspice/"
+        target="_blank"
+      >
         <v-icon>mdi-facebook</v-icon>
       </a>
       <a

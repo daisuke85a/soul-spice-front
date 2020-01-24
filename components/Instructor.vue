@@ -19,6 +19,21 @@
           <fade-in-up-in-screen>
             <v-card-title class="font-weight-bold">
               YUKKY
+              <v-spacer></v-spacer>
+              <a
+                class="mx-1"
+                href="https://www.instagram.com/yukky0204/"
+                target="_blank"
+              >
+                <v-icon>mdi-instagram</v-icon>
+              </a>
+              <a
+                class="mx-1"
+                href="https://www.facebook.com/tanobe.yuuki/"
+                target="_blank"
+              >
+                <v-icon>mdi-facebook</v-icon>
+              </a>
             </v-card-title>
           </fade-in-up-in-screen>
           <fade-in-up-in-screen>
@@ -89,6 +104,21 @@
           <fade-in-up-in-screen>
             <v-card-title class="font-weight-bold">
               TAKUYA
+              <v-spacer></v-spacer>
+              <a
+                class="mx-1"
+                href="https://www.instagram.com/takuya_820/"
+                target="_blank"
+              >
+                <v-icon>mdi-instagram</v-icon>
+              </a>
+              <a
+                class="mx-1"
+                href="https://www.facebook.com/takuya.tanobe/"
+                target="_blank"
+              >
+                <v-icon>mdi-facebook</v-icon>
+              </a>
             </v-card-title>
           </fade-in-up-in-screen>
           <fade-in-up-in-screen>
@@ -154,5 +184,8 @@
 <style scoped>
 .display-1 {
   letter-spacing: 0.2em !important;
+}
+a {
+  text-decoration: none;
 }
 </style>
