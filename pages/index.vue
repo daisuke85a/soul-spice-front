@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed app>
+    <v-navigation-drawer
+      v-model="drawer"
+      :clipped="clipped"
+      fixed
+      app
+      color="light-blue"
+      dark
+    >
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
