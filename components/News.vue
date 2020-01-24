@@ -1,10 +1,9 @@
 <template>
   <div>
-    <v-row align="center" justify="center">
-      <v-col class="text-center" cols="12">
-        <h2 class="display-2 font-weight-black pa-5">[ NEWS ]</h2>
-      </v-col>
-    </v-row>
+    <div class="text-center py-5">
+      <h2 class="display-1 font-weight-black">NEWS</h2>
+      <p class="subtitle-1">- 新着情報 -</p>
+    </div>
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
     <v-row v-for="n in 1" :key="n" class="mb-1" no-gutters>
       <v-col
@@ -86,3 +85,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.display-1 {
+  letter-spacing: 0.2em !important;
+}
+</style>
