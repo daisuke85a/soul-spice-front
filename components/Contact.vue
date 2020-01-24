@@ -1,13 +1,12 @@
 <template>
   <div>
-    <v-row align="center" justify="center">
-      <v-col class="text-center" cols="12">
-        <h2 class="display-2 font-weight-black">[ CONTACT ]</h2>
-        <p>
-          サークル参加についての詳細やイベントブッキングについてなど、お気軽にお問い合わせください！
-        </p>
-      </v-col>
-    </v-row>
+    <div class="text-center py-5">
+      <h2 class="display-1 font-weight-black">CONTACT</h2>
+      <p class="subtitle-1">- お問い合わせ -</p>
+      <p>
+        サークル参加についての詳細やイベントブッキングについてなど、お気軽にお問い合わせください！
+      </p>
+    </div>
     <v-row justify="center">
       <v-col class="text-center" cols="12">
         <form>
@@ -166,3 +165,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.display-1 {
+  letter-spacing: 0.2em !important;
+}
+</style>
