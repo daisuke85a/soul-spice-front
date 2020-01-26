@@ -5,7 +5,7 @@
     <v-parallax dark src="/images/bg.jpg" height="400">
       <div class="text-center">
         <fade-in-up-in-screen>
-          <h2 class="display-1 font-weight-black">
+          <h2 class="display-1 font-weight-black pt-10">
             TIME TABLE
           </h2>
           <p class="subtitle-1">- スケジュール -</p>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center py-5">
-      <h2 class="display-1 font-weight-black">CONTACT</h2>
+      <h2 class="display-1 font-weight-black pt-10">CONTACT</h2>
       <p class="subtitle-1">- お問い合わせ -</p>
       <p class="text-left">
         サークル参加についての詳細やイベントブッキングについてなど、お気軽にお問い合わせください！

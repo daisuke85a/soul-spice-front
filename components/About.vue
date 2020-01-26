@@ -5,7 +5,7 @@
     <v-img class="white--text" src="/images/bg.jpg" height="100%">
       <div class="text-center py-5">
         <fade-in-up-in-screen>
-          <h2 class="display-1 font-weight-black">ABOUT</h2>
+          <h2 class="display-1 font-weight-black pt-10">ABOUT</h2>
           <p class="subtitle-1">- サークル紹介 -</p>
         </fade-in-up-in-screen>
       </div>

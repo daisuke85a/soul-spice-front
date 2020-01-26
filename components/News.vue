@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center py-5">
-      <h2 class="display-1 font-weight-black">NEWS</h2>
+      <h2 class="display-1 font-weight-black pt-10">NEWS</h2>
       <p class="subtitle-1">- 新着情報 -</p>
     </div>
     <!-- TODO: ３行以上の場合はアコーディオンにしたい -->
