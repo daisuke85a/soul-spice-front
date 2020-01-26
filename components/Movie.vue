@@ -3,7 +3,7 @@
     <v-row align="center" justify="center">
       <v-col class="text-center" cols="12">
         <fade-in-up-in-screen>
-          <h2 class="display-1 font-weight-black">MOVIE</h2>
+          <h2 class="display-1 font-weight-black pt-10">MOVIE</h2>
           <p class="subtitle-1">- メンバー動画 -</p>
         </fade-in-up-in-screen>
       </v-col>

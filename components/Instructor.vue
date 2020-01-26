@@ -2,7 +2,7 @@
   <div>
     <div class="text-center py-5">
       <fade-in-up-in-screen>
-        <h2 class="display-1 font-weight-black">INSTRUCTOR</h2>
+        <h2 class="display-1 font-weight-black pt-10">INSTRUCTOR</h2>
         <p class="subtitle-1">- コーチ紹介 -</p>
       </fade-in-up-in-screen>
     </div>
