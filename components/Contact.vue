@@ -57,7 +57,7 @@
               <v-card-text> {{ dialogText.content }} </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="green darken-1" text @click="dialog = false">
+                <v-btn color="green darken-1" text @click="dialogOk">
                   OK
                 </v-btn>
               </v-card-actions>
@@ -81,7 +81,7 @@ const dialogText = {
   failed: {
     title: 'お問い合わせに失敗しました',
     content:
-      'お手数ですが、別途soulspice2006@gmail.comまでご連絡をお願いいたします。'
+      'お手数ですが、OKボタンを押して表示されるフォームよりお問い合わせをお願いいたします。'
   }
 }
 
@@ -100,7 +100,8 @@ export default {
     text: '',
     loading: false,
     dialog: false,
-    dialogText: dialogText.success
+    dialogText: dialogText.success,
+    success: null
   }),
 
   computed: {
@@ -145,12 +146,14 @@ export default {
           }
         )
         console.log(response)
+        this.success = true
         this.dialogText = dialogText.success
         this.name = ''
         this.email = ''
         this.text = ''
         this.$v.$reset()
       } catch (e) {
+        this.success = false
         this.dialogText = dialogText.failed
       }
       this.loading = false
@@ -161,6 +164,15 @@ export default {
       this.name = ''
       this.email = ''
       this.text = ''
+    },
+    dialogOk() {
+      if (this.success === false) {
+        this.dialog = false
+        location.href =
+          'https://docs.google.com/forms/d/e/1FAIpQLSdx7mGD1hTxUGymFx7Mvl6lx0hnw8BM-WcHURINxqXEtdZWCQ/viewform'
+      } else {
+        this.dialog = false
+      }
     }
   }
 }
