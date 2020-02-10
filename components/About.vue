@@ -37,7 +37,7 @@
             color="orange font-weight-bold"
             dark
             :small="$vuetify.breakpoint.xsOnly"
-            @click="$vuetify.goTo('#contact')"
+            @click="$goToTwice($vuetify, '#contact')"
           >
             <v-icon>mdi-email</v-icon>お問い合わせ
           </v-btn>

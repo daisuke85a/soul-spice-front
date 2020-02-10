@@ -76,7 +76,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/components.js'],
+  plugins: ['~plugins/components.js', '~/plugins/goToTwice'],
   /*
    ** Nuxt.js dev-modules
    */
