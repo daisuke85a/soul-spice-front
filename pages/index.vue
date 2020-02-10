@@ -111,7 +111,7 @@ export default {
   },
   methods: {
     navLinkClick(to) {
-      this.$vuetify.goTo(to)
+      this.$goToTwice(this.$vuetify, to)
       this.drawer = null
     }
   }
